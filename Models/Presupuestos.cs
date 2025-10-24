@@ -1,0 +1,46 @@
+public class Presupuestos
+{
+    int IdPresupuesto {get; set; }
+    string ?nombreDestinatario {get; set; }
+    string ?FechaCreacion {get; set; }
+    List<PresupuestosDetalle> detalle {get; set; }
+
+    public Presupuestos(int id, string nombre, string fecha)
+    {
+        IdPresupuesto = id;
+        nombreDestinatario = nombre;
+        FechaCreacion = fecha;
+        detalle = new List<PresupuestosDetalle>();
+    }
+
+    //Metodos
+    public double MontoPresupuesto()
+    {
+        double monto = 0;
+        foreach (var item in detalle)
+        {
+            monto += item.producto.precio;
+        }
+        return monto;
+    }
+
+    public double MontoPresupuestoConIva()
+    {
+        double montoConIVA = 0;
+        foreach (var item in detalle)
+        {
+            montoConIVA += item.producto.precio;
+        }
+        return montoConIVA * 1.21;
+    }
+
+    public int CantidadProductos()
+    {
+        int cantidad = 0;
+        foreach (var item in detalle)
+        {
+            cantidad += item.cantidad;
+        }
+        return cantidad;
+    }
+}
