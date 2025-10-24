@@ -1,0 +1,6 @@
+@tl2_tp7_2025_jm07_web_HostAddress = http://localhost:5242
+
+GET {{tl2_tp7_2025_jm07_web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
