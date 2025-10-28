@@ -1,10 +1,13 @@
 namespace tl2_tp7_2025_jm07_web.Models;
+
 public class Presupuestos
 {
-    int IdPresupuesto {get; set; }
-    string ?nombreDestinatario {get; set; }
-    string ?FechaCreacion {get; set; }
-    List<PresupuestosDetalle> detalle {get; set; }
+    public int IdPresupuesto { get; set; }
+    public string nombreDestinatario { get; set; }
+    public string FechaCreacion { get; set; }
+    public List<PresupuestosDetalle> detalle { get; set; }
+
+    public Presupuestos() { }
 
     public Presupuestos(int id, string nombre, string fecha)
     {
