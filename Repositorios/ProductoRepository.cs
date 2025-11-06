@@ -1,8 +1,6 @@
 ﻿using Microsoft.Data.Sqlite;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using tl2_tp7_2025_jm07_web.Models;
 
 namespace tl2_tp7_2025_jm07_web.Repositorios;
@@ -114,7 +112,7 @@ public class ProductoRepository
         int filasAfectadas = comando.ExecuteNonQuery();
 
         conexion.Close();
-        
+
         return filasAfectadas > 0;
     }
 }

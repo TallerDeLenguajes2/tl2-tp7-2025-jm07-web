@@ -60,6 +60,4 @@ public class ProductosController: ControllerBase
             return NotFound($"No se encontró el producto con ID {id} para eliminar.");
         }
     }
-
-
 }
